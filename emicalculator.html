@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link rel="stylesheet" type="text/css" href="css/contact-pop.css" />
+<!-- include jQuery and Contact-Pop scripts -->
+<script src="js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/contact-pop.js"></script>
+  <script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+    <meta charset="utf-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loan Sarthi</title>
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css"/> 
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.css" type="text/css" media="screen" /> 
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css"/>  
+    <link id="switcher" href="assets/css/theme-color/default.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	
+	<script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+<style>
+
+
+h2 {
+  /*margin: 1.75em 0 0;*/
+  font-size: 5vw;
+}
+
+h3 { font-size: 1.3em; 
+
+}
+h5{
+background-color: #00AC79;
+    padding: 10px;
+    color: #fff;
+}
+.v-center {
+  height: 100vh;
+  width: 100%;
+  display: table;
+  position: relative;
+  text-align: center;
+}
+
+.v-center > div {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  top: -10%;
+}
+
+.btn {
+  font-size: 3vmin;
+  padding: 0.75em 1.5em;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  color: #333;
+  text-decoration: none;
+  display: inline;
+  border-radius: 4px;
+  -webkit-transition: background-color 1s ease;
+  -moz-transition: background-color 1s ease;
+  transition: background-color 1s ease;
+}
+
+.btn:hover {
+  background-color: #ddd;
+  -webkit-transition: background-color 1s ease;
+  -moz-transition: background-color 1s ease;
+  transition: background-color 1s ease;
+}
+
+.btn-small {
+  padding: .75em 1em;
+  font-size: 0.8em;
+}
+
+.modal-box {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  width: 68%;
+  background: white;
+  border-bottom: 1px solid #aaa;
+  border-radius: 4px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+}
+@media (min-width: 32em) {
+
+.modal-box { width: 50%; }
+.form input{width:100%}
+}
+@media (min-width: 22em) {
+
+.modal-box { width: 60%; }
+.form input{width:100%}
+}
+.modal-box header,
+.modal-box .modal-header {
+  padding: 1.25em 1.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-box header h3,
+.modal-box header h4,
+.modal-box .modal-header h3,
+.modal-box .modal-header h4 { margin: 0; }
+
+.modal-box .modal-body { padding:0; }
+
+.modal-box footer,
+.modal-box .modal-footer {
+  padding: 1em;
+  border-top: 1px solid #ddd;
+  background: rgba(0, 0, 0, 0.02);
+  text-align: right;
+}
+
+.modal-overlay {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+a.close {
+  line-height: 1;
+  font-size: 1.5em;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  text-decoration: none;
+  color: #bbb;
+}
+
+a.close:hover {
+  color: #222;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  transition: color 1s ease;
+}
+.enq{
+ width:100%;
+ margin-bottom:17px;
+box-shadow: 4px 8px 5px -2px #F1E6E6;
+    border: 1px solid rgba(193, 193, 193, 0.28);
+    padding: 7px;
+}
+.popup{
+padding:20px;
+}
+.emic{position:fixed; top: 25%; right: 0%;width: 66px; height: 100px;  z-index:12000;
+
+}
+</style>
+<script src="js/jquery-1.11.1.min.js"></script> 
+<script>
+$(function(){
+
+var appendthis =  ("<div class='modal-overlay js-modal-close'></div>");
+
+	$('a[data-modal-id]').click(function(e) {
+		e.preventDefault();
+    $("body").append(appendthis);
+    $(".modal-overlay").fadeTo(500, 0.7);
+    //$(".js-modalbox").fadeIn(500);
+		var modalBox = $(this).attr('data-modal-id');
+		$('#'+modalBox).fadeIn($(this).data());
+	});  
+  
+  
+$(".js-modal-close, .modal-overlay").click(function() {
+    $(".modal-box, .modal-overlay").fadeOut(500, function() {
+        $(".modal-overlay").remove();
+    });
+ 
+});
+ 
+$(window).resize(function() {
+    $(".modal-box").css({
+        top: ($(window).height() - $(".modal-box").outerHeight()) / 2,
+        left: ($(window).width() - $(".modal-box").outerWidth()) / 2
+    });
+});
+ 
+$(window).resize();
+ 
+});
+</script>
+	
+  
+  </head>
+  <body>
+   <div class="emic">
+					<a href="emicalculator.html"><img src="img/calculator.png"></a>
+					</div>
+  <div id="popup1" class="modal-box">
+    <div class="modal-body">
+
+<div class='popup'><!--
+<div class='cnt223'>-->
+<div class="form">
+<h3 style="color:green;" class="ap"> Apply Now</h3>
+<!--<form id="register" action="javascript:void(0);" method="post" >
+     <h3 class="message" style="margin-top:0px;margin-bottom:5px;color: green;"></h3>
+<br>
+    <input type="text" id="username" class="username" name="username" placeholder="Name" required />
+
+    <input type="email" id="emailid" class="emailid" name="emailid" placeholder="Email" required/>  
+
+    <input type="text" id="phonenumber" class="phonenumber" name="phonenumber" 
+    pattern="^\d{4}\d{3}\d{3}$" placeholder="Mobile Number" maxlength="10" required/>  
+<select class="enq" id="comment" class="comment" name="comment" required>
+<option>Select Loan</option>
+<option value="Business Loan">Business Loan</option>
+<option value="Car Loan">Car Loan</option>
+<option value="Home Loan">Home Loan</option>
+<option value="Loan Against Property">Loan Against property</option>
+<option value="Personal Loan">Personal Loan</option>
+<option value="Working Capital">Working Capital</option>
+</select>
+   
+   
+    <input type="text" name="otp" id="otp" pattern="^\d{6}$" placeholder="Enter OTP" /> 
+
+     
+    <br>
+	 <input type="submit" id="otp_btn" value="Send OTP" style="width:150px; background-color:#00D999;">
+	<!--<button type="submit" id="submit_btn" value="" disabled="disabled" style=" background-color:#00D999;"> Submit</button>
+	<input type="submit" name="submit" id="otp_btn" class="send" style="width:150px; background-color:#00D999; margin-right:15px;" value="Submit" >
+	<a href="#" class="btn btn-small js-modal-close">Close</a>
+	
+  </form>-->
+ <form id="register" name="myform" action="javascript:void(0);" method="post" onsubmit="return valid_enquiry();">
+     <h3 class="message" style="margin-top:0px;margin-bottom:5px;color: green;"></h3>
+<br>
+    <div class="form-group">
+    <input type="text" id="username" class="username form-control" name="username" placeholder="Name" required>
+    </div>
+    <div class="form-group">
+<input type="text" id="phonenumber" class="mob form-control" name="phonenumber" placeholder="Mobile Number">  
+  </div>
+  <div class="form-group">
+  
+<input type="email" id="emailid" class="form-control" name="emailid" placeholder="Email">  
+</div>
+<div class="form-group">
+<select class="enq form-control"  id="comment" name="comment" >
+<option value="">Select Loan</option>
+<option value="Business Loan">Business Loan</option>
+<option value="Car Loan">Car Loan</option>
+<option value="Home Loan">Home Loan</option>
+<option value="Loan Against Property">Loan Against property</option>
+<option value="Personal Loan">Personal Loan</option>
+<option value="Working Capital">Working Capital</option>
+</select>  
+</div>
+ <input type="text" name="otp" id="otp" class="toptext" pattern="^\d{6}$" placeholder="Enter OTP (Please check your mobile no.)" style="display:none" /> 
+<input type="submit" id="otp_btn" class="send" value="Submit" style="width:150px; background-color:#00D999; color:#fff; margin-right:15px;" >
+    
+  <button type="submit" name="btn" id="submit_btn" class="otp" value="" disabled="disabled" style=" background-color:#00D999; margin-right:15px; display:none"> Submit</button>
+	<a href="#" class="btn btn-small js-modal-close">Close</a>
+  </form>
+
+</div>
+<script language="javascript">
+			function InvalidMsg(textbox) {
+
+     if(textbox.validity.patternMismatch){
+        textbox.setCustomValidity('please enter 10 Digit Mobile Number.');
+    }    
+    else {
+        textbox.setCustomValidity('');
+    }
+    return true;
+}
+</script>
+<script type="text/javascript">
+  
+ $('form').submit(function(event) {
+    event.preventDefault();
+    var form = $(this);
+    var formData = new FormData(this);
+    if(form.attr('id')=="register")
+    {
+
+        var phonenumber=$('#phonenumber').val();
+        var username=$('#username').val();
+        var emailid=$('#emailid').val();
+        var comment=$('#comment').val();
+
+        if(Number(phonenumber)){
+
+            $('#otp_btn').html('Sending');
+            $('.message').html('');
+
+            $.ajax({
+                type : 'POST',
+                url : 'getloandata.php?phonenumber='+phonenumber+'&username='+username+'&emailid='+emailid+'&comment='+comment,
+                mimeType:"multipart/form-data",
+                contentType: false,
+                cache: false,
+                processData:false
+            }).success(function(data) {
+                var jsondata = JSON.parse(data);
+                if(jsondata.status==true)
+                {
+                    window.location = 'sendotp.php?emailid='+emailid;
+                }
+                else
+                {
+                    $('.message').html(jsondata.msg);
+                    $('#otp_btn').html('Verified');
+                }
+
+            }).fail(function(jqXHR, textStatus, errorThrown) {
+                console.log('error thhrow');
+            });
+        }
+      }
+  });
+
+  $('form').submit(function(event) {
+$(function(){
+		// Calling Login Form
+		$("form").click(function(){
+			$(".social_login").hide();
+			$(".user_login").show();
+			return false;
+		});
+
+		// Calling Register Form
+		$("#register_form").click(function(){
+			$(".social_login").hide();
+			$(".user_register").show();
+			$(".header_title").text('Register');
+			return false;
+		});
+
+		// Going back to Social Forms
+		$(".back_btn").click(function(){
+			$(".user_login").hide();
+			$(".user_register").hide();
+			$(".social_login").show();
+			$(".header_title").text('Login');
+			return false;
+		});
+
+	})
+            var form = $(this);
+            var formData = new FormData(this);
+            $('.message').html('');
+
+            $('#submit_btn').html('Loading....');
+/*
+            $.ajax({
+                type : 'post',
+                url : 'register.php',
+                data : formData,
+                mimeType:"multipart/form-data",
+                contentType: false,
+                cache: false,
+                processData:false
+            }).success(function(data) {
+                
+               
+                console.log(data);
+                var jsondata = JSON.parse(data);
+                console.log(jsondata);
+
+                if(jsondata.status==true){
+
+                    $('#username').val('');
+                    $('#emailid').val('');
+                    $('#phonenumber').val('');
+                    $('#otp').val('');
+                    $('#comment').val('');
+                    $('#otp_btn').html('Message Sent');
+                    $('#otp_btn').removeAttr('disabled','');
+                    
+                }else{
+
+                }
+
+               
+
+                $('#submit_btn').html('Submit');
+                $('.message').html(jsondata.msg);
+
+            }).fail(function(jqXHR, textStatus, errorThrown) {
+                console.log('error thhrow');
+            });*/
+  });
+
+</script>
+</div>
+</div>
+  </div>
+  
+</div>
+
+ 
+  </div>
+    <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
+
+  
+  <section id="menu-area">
+    <nav class="navbar navbar-default main-navbar" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                                                    
+           <a class="navbar-brand logo" href="index.html"><img src="assets/images/loan.png" style="width:233px; height:98px;" ></a>                     
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
+            <!--<li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#about">ABOUT</a></li>                 
+            <li><a href="#service">SERVICE</a></li>      -->   
+              
+			 <li><a href="emicalculator.html">EMI CALCULATOR</a></li>
+             <li style="background-color:#000000; color:white;"><a href="/contact.php" data-modal-id="popup1" style="color:white;">APPLY NOW</a></li>
+			 
+          </ul>                            
+        </div><!--/.nav-collapse -->
+       <!--<div class="search-area">
+          <form action="">
+            <input id="search" name="search" type="text" placeholder="What're you looking for ?">
+            <input id="search_submit" value="Rechercher" type="submit">
+          </form>
+        </div> -->        
+      </div>          
+    </nav> 
+  </section>
+    
+  
+  <!-- End counter section -->
+  
+  
+  
+   
+  <section id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+		<h1 align="center">EMI CALCULATOR</h1>
+
+		<!-- EMI Calculator Widget START -->
+		<script src="js/emicalc-loader.min.js" type="text/javascript"></script>
+		<div id="ecww-widgetwrapper" style="min-width:250px;width:100%;">
+		<div id="ecww-widget" style="position:relative;padding-top:0;padding-bottom:280px;height:0;overflow:hidden;"></div>
+		<div id="ecww-more" style="background:#333;font:normal 13px/1 Helvetica, Arial, Verdana, Sans-serif;padding:10px 0;color:#FFF;text-align:center;width:100%;clear:both;margin:0;clear:both;float:left;"></div>
+		</div>
+		
+		
+         </span></h2>
+                   
+                                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+  
+  <!-- End Contact section -->
+  <!-- Start Google Map -->
+ 
+  <!-- End Google Map -->
+
+   <!-- Start Footer -->    
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-top-area">                     
+                 <div class="footer-social">
+                <a class="facebook" href="https://www.facebook.com/Loan-Sarthi-1605676156387549/?ref=bookmarks" target="_blank"><span class="fa fa-facebook"></span></a>
+                <a class="twitter" href="https://twitter.com/LoanSarthi" target="_blank"><span class="fa fa-twitter"></span></a>
+                <a class="google-plus" href="https://plus.google.com/u/5/117471792815777427206/posts" target="_blank"><span class="fa fa-google-plus"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+	<div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="blog-footer"> 
+             <ul style="float:left;">			
+             <a style="color:#fff; padding:10px" href="aboutus.html">ABOUT US</a> 
+			 <a style="color:#fff; padding:10px" href="blogs.html">BLOG</a>
+			 <a style="color:#fff; padding:10px" href="disclaimer.html">DISCLAMER</a>
+			 <a style="color:#fff; padding:10px" href="privacy-policy.html">PRIVACY POLICY</a> 
+			 <a style="color:#fff; padding:10px" href="contact.html">CONTACT / ADVERTISE</a> 
+			 
+			 </ul>
+			 <p align="right">Maintained by <a href="http://www.ontimeinfotech.com" target="_blank">onTime Infotech</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script type="text/javascript" src="assets/js/slick.js"></script>
+  <script type="text/javascript" src="assets/js/waypoints.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.counterup.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="assets/js/wow.js"></script> 
+  <script type="text/javascript" src="assets/js/custom.js"></script>
+  <script>        
+ function valid_enquiry()
+{
+//alert(document.getElementById('other').checked);
+ if(document.getElementById('phonenumber').value=='')
+
+   {
+  alert('Enter your mobile no.');
+  document.getElementById('phonenumber').focus();
+  return false;
+   }
+var contact_id=document.getElementById("phonenumber").value;
+var contact_pattern=/^\d{10}$/;
+if(!contact_id.match(contact_pattern))
+{
+alert("plz enter 10 digit mobile number");
+document.getElementById("phonenumber").focus();
+return false;
+ }  
+  
+}       
+</script>
+  </body>
+</html>
+<script type="text/javascript">stLight.options({publisher: "0e1dff39-4652-4b4c-b828-18f74c1357b9", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+<script>
+var options={ "publisher": "0e1dff39-4652-4b4c-b828-18f74c1357b9", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "googleplus", "twitter", "linkedin", "pinterest", "sharethis"]}};
+var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>

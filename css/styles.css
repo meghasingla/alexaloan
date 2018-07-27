@@ -1,0 +1,26 @@
+.form {
+width:auto;
+}
+
+.form input{
+height:auto;
+width:350px;
+border-radius:5px;
+padding:8px;
+margin-bottom:10px;
+}
+.form textarea{
+width:auto;
+height:100px;
+padding:8px;
+border-radius:5px;
+}
+.form button{
+width:109px;
+padding:8px;
+margin-top:20px;
+background:#FF0000;
+color:#fff;
+border:none;
+border-radius:5px;
+}
