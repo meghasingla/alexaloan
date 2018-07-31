@@ -16,10 +16,11 @@ $mailer->from('alexafincorp@gmail.com')
 	->html(parseTemplate('contact-userpersonal.html', $_REQUEST))->send($_REQUEST['email']);
 } 
 catch (\Exception $e) {
-		redirect_back(['error' => 'Something went wrong. we couldn\t send email.']);
+		throw $e;
+		redirect_back(['error' => 'Something went wrong. we couldn\'t send email.']);
 	}
 
-	redirect_back(['message' => 'Your form has been submitted']);
+	redirect_back(['message' => 'Your message has been submitted']);
 } else {
 	http_response_code(404);
 }

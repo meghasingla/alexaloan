@@ -17,7 +17,7 @@ if($_POST) {
 		redirect_back(['error' => 'Something went wrong. we couldn\t send email.']);
 	}
 
-	redirect_back(['message' => 'Your form has been submitted']);
+	redirect_back(['message' => 'Your message has been submitted']);
 } else {
 	http_response_code(404);
 }
