@@ -30,7 +30,6 @@
 <script src="http://osvaldas.info/examples/main.js"></script>
 
 <script src="http://osvaldas.info/examples/drop-down-navigation-touch-friendly-and-responsive/doubletaptogo.js"></script> 
-<script src="js/main.js"></script>
 <style>
 
 
@@ -41,6 +40,11 @@ h2 {
 
 h3 { font-size: 1.3em; 
 
+
+}
+.topnav {
+  position: relative;
+  z-index: 10;
 }
 
 .v-center {
@@ -96,7 +100,7 @@ color: #000;
 	
   
   </head>
-  <body>
+  <body class="fixed-header">
    <div class="emic">
 					<a   href="emicalculator.php"><img src="img/calculator.png"></a>
 					</div>
@@ -116,7 +120,7 @@ color: #000;
 
 </div>
 
-  <div class="topnav" id="myTopnav">
+  <div class="topnav clearfix" id="myTopnav">
     <nav >
   <ul class="nav navbar-nav wow fadeInRight animated animated" data-wow-delay=".5s" style="margin-top:-45px; float: right;">
     <li><a href="index.php" class="active" style="color:#003366; ">Home</a></li>
@@ -182,10 +186,7 @@ color: #000;
 </div>
 </div>
 </header>
-<script>
-  var link = window.location.pathname.replace('/', '');
-    $('a[href="'+ link +'"]').addClass('active').parent('li').siblings('li').find('a').removeClass('active');
-</script>
+
 
 
    

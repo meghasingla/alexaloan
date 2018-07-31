@@ -185,6 +185,12 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 <script>
-  var link = window.location.pathname.replace('/', '');
-    $('a[href="'+ link +'"]').addClass('active').parent('li').siblings('li').find('a').removeClass('active');
+  (function(link) {
+    $('#myTopnav').find('a').removeClass('active');
+    var linkEl = $('a[href="'+ link +'"]');
+    linkEl.addClass('active').siblings('a');
+    linkEl.closest('.dropdown').children('a').addClass('active').sibli;
+    // console.log('link is ', linkEl);
+  })(window.location.pathname.replace('/', ''));
+
 </script>
