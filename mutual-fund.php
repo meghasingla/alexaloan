@@ -7,7 +7,7 @@
 		<h1 align="center">Mutual Fund</h1>
      <div class="col-md-7">
 
-<?php include("apply-now.php"); ?>
+<?php include("applymutual.php"); ?>
 
 </div>
 <div class="col-md-5">

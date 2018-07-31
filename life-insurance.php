@@ -7,7 +7,7 @@
 		<h1 align="center">Life Insurance</h1>
      <div class="col-md-7">
 
-<?php include("apply-now.php"); ?>
+<?php include("apply-life.php"); ?>
 
 </div>
 <div class="col-md-5">

@@ -1,0 +1,19 @@
+{
+    "name": "adil/crologic",
+    "description": "Crologic Website",
+    "type": "website",
+    "authors": [
+        {
+            "name": "Md Adil",
+            "email": "md-adil@live.com"
+        }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "^6.0"
+    },
+    "autoload": {
+    	"psr-4": {
+    		"App\\" : "app/"
+    	}
+    }
+}

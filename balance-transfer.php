@@ -7,7 +7,7 @@
 		<h1 align="center">Balance Transfer</h1>
       <div class="col-md-7">
 
-<?php include("apply-now.php"); ?>
+<?php include("apply-balance.php"); ?>
 
 </div>
 <div class="col-md-5">

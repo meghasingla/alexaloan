@@ -7,7 +7,7 @@
 		<h1 align="center">Personal Loan</h1>
       <div class="col-md-7">
 
-<?php include("apply-now.php"); ?>
+<?php include("apply.php"); ?>
 
 </div>
 <div class="col-md-5">

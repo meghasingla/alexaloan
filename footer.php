@@ -183,3 +183,8 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 <script src="asset/plugins/iCheck/icheck.min.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+  var link = window.location.pathname.replace('/', '');
+    $('a[href="'+ link +'"]').addClass('active').parent('li').siblings('li').find('a').removeClass('active');
+</script>

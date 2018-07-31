@@ -7,7 +7,7 @@
 		<h1 align="center">Home Loan</h1>
       <div class="col-md-7">
 
-<?php include("apply-now.php"); ?>
+<?php include("applyhome.php"); ?>
 
 </div>
 <div class="col-md-5">

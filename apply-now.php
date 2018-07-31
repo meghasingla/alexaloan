@@ -32,7 +32,7 @@ if ($response != null && $response->success) {
         
         <h4 class="modal-title">Apply Now</h4>
       </div>
-     <form method="post" action="">
+     <form method="post" action="form/contact.php">
      <h3 class="message" style="margin-top:0px;margin-bottom:5px;color: green;"></h3>
 <br>
 <div class="row">
@@ -100,6 +100,7 @@ if ($response != null && $response->success) {
 </div>
 </div>
 <input type="submit" id="otp_btn" name="submit" class="send btn btn-yellow pull-right" value="Submit" >
+  
 <div class="clearfix"></div>
   </form>
     </div>

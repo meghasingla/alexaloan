@@ -2,54 +2,59 @@
 
 <div class="cleadrfix"></div>
 <section id="loan-product">
+
 <div class="container">
+   
+   
 <div class="row">
-<h2>Loan & Insurance</h2>
-<p class="text-center">Partner In Your Success and Growth</p>
+
+<h2></h2>
+<p class="text-center"></p><br><br><br><br>
 <div class="col-sm-2 col-sm-offset-1 margin-top-bottom-40">
-<a href="cash-credit.php"><img src="img/credit-card.png" class="img-responsive center-block"></a>
+
+<a href="cash-credit.php"><img src="img/credit.png" class="img-responsive center-block"></a>
 </div>
 <div class="col-sm-2 margin-top-bottom-40">
-<a href="personal-loan.php"><img src="img/personal-loan.png" class="img-responsive center-block"></a>
+<a href="personal-loan.php"><img src="img/personals.png" class="img-responsive center-block"></a>
 </div>
 <div class="col-sm-2 margin-top-bottom-40">
-<a href="home-loan.php"><img src="img/home-loan.png" class="img-responsive center-block"></a>
+<a href="home-loan.php"><img src="img/home.png" class="img-responsive center-block"></a>
 </div>
 <div class="col-sm-2 margin-top-bottom-40">
-<a href="mutual-fund.php"><img src="img/mutual-fund.png" class="img-responsive center-block"></a>
+<a href="mutual-fund.php"><img src="img/mutual.png" class="img-responsive center-block"></a>
 </div>
 <div class="col-sm-2 margin-top-bottom-40">
-<a href="business-loan.php"><img src="img/business-loan.png" class="img-responsive center-block"></a>
+<a href="business-loan.php"><img src="img/busi.png" class="img-responsive center-block"></a>
 </div>
 <div class="col-sm-2 col-sm-offset-1 margin-top-bottom-40">
-<a href="car-loan.php"><img src="img/car-loan.png" class="img-responsive center-block"></a>
+<a href="car-loan.php"><img src="img/cars.png" class="img-responsive center-block"></a>
 </div>
 <div class="col-sm-2 margin-top-bottom-40">
-<a href="two-wheeler-loan.php"><img src="img/two-wheeler-loan.png" class="img-responsive center-block"></a>
+<a href="two-wheeler-loan.php"><img src="img/two.png" class="img-responsive center-block"></a>
 </div>
 <div class="col-sm-2 margin-top-bottom-40">
-<a href="loan-against-property.php"><img src="img/loan-against-property.png" class="img-responsive center-block"></a>
+<a href="loan-against-property.php"><img src="img/loan.png" class="img-responsive center-block"></a>
 </div>
 <div class="col-sm-2 margin-top-bottom-40">
-<a href="home-loan-transfer.php"><img src="img/home-loan-transfer.png" class="img-responsive center-block"></a>
+<a href="home-loan-transfer.php"><img src="img/transfer.png" class="img-responsive center-block"></a>
 </div>
 <div class="col-sm-2 margin-top-bottom-40">
-<a href="lc.php"><img src="img/sip.png" class="img-responsive center-block"></a>
+<a href="lc.php"><img src="img/lc.png" class="img-responsive center-block"></a>
 </div>
 <div class="col-sm-2 col-sm-offset-1  margin-top-bottom-40">
-<a href="agriculture-loan.php"><img src="img/agreeculture-loan.png" class="img-responsive center-block"></a>
+<a href="agriculture-loan.php"><img src="img/agr.png" class="img-responsive center-block"></a>
 </div>
 <div class="col-sm-2 margin-top-bottom-40">
-<a href="re-finance.php"><img src="img/refinance.png" class="img-responsive center-block"></a>
+<a href="re-finance.php"><img src="img/re.png" class="img-responsive center-block"></a>
 </div>
 <div class="col-sm-2 margin-top-bottom-40">
-<a href="balance-transfer.php"><img src="img/balance-transfer.png" class="img-responsive center-block"></a>
+<a href="balance-transfer.php"><img src="img/balance.png" class="img-responsive center-block"></a>
 </div>
 <div class="col-sm-2 margin-top-bottom-40">
-<a href="general-insurance.php"><img src="img/general-insurance.png" class="img-responsive center-block"></a>
+<a href="general-insurance.php"><img src="img/general.png" class="img-responsive center-block"></a>
 </div>
 <div class="col-sm-2 margin-top-bottom-40">
-<a href="life-insurance.php"><img src="img/life-insurance.png" class="img-responsive center-block"></a>
+<a href="life-insurance.php"><img src="img/life.png" class="img-responsive center-block"></a>
 </div>
 </div>
 </div>

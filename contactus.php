@@ -32,7 +32,7 @@
         <div class="col-md-8 col-sm-6 col-xs-12">
           <div class="contact-right wow fadeInRight">
             <h2>Send a message</h2>
-            <form action="" class="contact-form" method="post">
+            <form action="" class="contact-form" method="post" action="form/cont.php">
               <div class="form-group">                
                 <input type="text" class="form-control" name="name" placeholder="Name" required>
               </div>

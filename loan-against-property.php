@@ -7,7 +7,7 @@
 		<h1 align="center">Loan Against Property</h1>
      <div class="col-md-7">
 
-<?php include("apply-now.php"); ?>
+<?php include("applyagainst.php"); ?>
 
 </div>
 <div class="col-md-5">
