@@ -1,35 +1,25 @@
 <?php
-use App\Mailer;
+require(__DIR__ . '/mailer.php');
 
-require(__DIR__ . '/../vendor/autoload.php');
+if($_POST) {
+	try {
+		$mailer->from('alexafincorp@gmail.com')
+			->replyTo($_REQUEST['email'])
+			->subject('Enquiry Mail')
+			->html(parseTemplate('contact-mail.html', $_REQUEST))->send('inquiries@alexafincorp.com');
 
-$mailer = new Mailer([
-	'host' => 'smtp.gmail.com',
-	'username' => 'alexafincorp@gmail.com',
-	'password' => 'alexa@123',
-	'port' => '465',
-	'encryption' => 'ssl'
-]);
+		$mailer->from('alexafincorp@gmail.com')
+			->replyTo('inquiries@alexafincorp.com')
+			->subject('Enquiry Mail')
+			->html(parseTemplate('contact-user.html', $_REQUEST))->send($_REQUEST['email']);
+		
+	} catch (\Exception $e) {
+		redirect_back(['error' => 'Something went wrong. we couldn\t send email.']);
+	}
 
-function parseTemplate($tpl, $data) {
-    $htmlContents = file_get_contents(__DIR__ . '/../templates/' . $tpl);
-    foreach($data as $key => $value) {
-        $htmlContents = str_replace('{{ ' . $key . ' }}', $value, $htmlContents);
-    }
-
-    return $htmlContents;
+	redirect_back(['message' => 'Your form has been submitted']);
+} else {
+	http_response_code(404);
 }
-
-
-$mailer->from('alexafincorp@gmail.com')
-	->replyTo($_REQUEST['email'])
-	->subject('Enquiry Mail')
-	->html(parseTemplate('contact-mail.html', $_REQUEST))->send('inquiries@alexafincorp.com');
-
-$mailer->from('alexafincorp@gmail.com')
-	->replyTo('inquiries@alexafincorp.com')
-	->subject('Enquiry Mail')
-	->html(parseTemplate('contact-user.html', $_REQUEST))->send($_REQUEST['email']);
-
 
 

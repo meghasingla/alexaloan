@@ -25,6 +25,14 @@ if ($response != null && $response->success) {
      $msg .= '<h4 class="text-danger">Please check I am not a Robot</h4>';
   }
 }
+if(isset($_GET['message'])) {
+  $msg = "<h4 class=\"text-success\">{$_GET['message']}</h4>";
+}
+
+if(isset($_GET['error'])) {
+  $msg = "<h4 class=\"text-danger\">{$_GET['error']}</h4>";
+}
+
 ?>
 <div class="modal-dialog" role="document">
     <div class="modal-content popup">

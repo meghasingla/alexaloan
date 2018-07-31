@@ -1,3 +1,13 @@
+body.fixed-header {
+  padding-top: 105px;
+}
+body.fixed-header > header {
+  position: fixed;
+  background: #fff;
+  left: 0;right: 0;top: 0;
+  z-index: 10;
+}
+
 @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
@@ -23,7 +33,7 @@
 z-index: 99999;
   
 }
-#myTopnav ul li  a:hover 
+#myTopnav ul li  a:hover, #myTopnav ul li a.active 
 {
   background-color :#003366 ;
 color :#fff !important;
