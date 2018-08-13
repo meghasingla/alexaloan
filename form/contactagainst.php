@@ -7,12 +7,12 @@ if($_POST) {
 
 $mailer->from('alexafincorp@gmail.com')
 	->replyTo($_REQUEST['email'])
-	->subject('Enquiry Mail')
+	->subject('ENQUIRY MAIL')
 	->html(parseTemplate('contact-mailagainst.html', $_REQUEST))->send('inquiries@alexafincorp.com');
 
 $mailer->from('alexafincorp@gmail.com')
 	->replyTo('inquiries@alexafincorp.com')
-	->subject('Enquiry Mail')
+	->subject('ENQUIRY MAIL(Do not Reply on this mail)')
 	->html(parseTemplate('contact-LoanAgainst.html', $_REQUEST))->send($_REQUEST['email']);
 } 
 catch (\Exception $e) {

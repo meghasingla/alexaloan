@@ -105,13 +105,9 @@ color: #000;
 					<a   href="emicalculator.php"><img src="img/calculator.png"></a>
 					</div>
   
-
-    <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
- <header>
 <div class="container">
 <div clas="row">
-  
-<div class="col-md-6">
+  <div class="col-md-6">
 <a href="index.php">
 <img src="img/logo.png" class="img-responsive">
 
@@ -122,6 +118,10 @@ color: #000;
 
   <div class="topnav clearfix" id="myTopnav">
     <nav >
+      <span class="glyphicon glyphicon-envelope" style="padding-left: 150px;font-size:13px;color: #000;"></span>
+                <a href="mailto:info@example.com" style="color: #000000;font-size: 13px;">info@alexafincorp.com</a>
+             &nbsp;
+              <span class="glyphicon glyphicon-earphone" style="color: #000;font-size:13px;"></span><span style="color: #000;font-size: 13px;">Call us now:+91 98128 98686</span>
   <ul class="nav navbar-nav wow fadeInRight animated animated" data-wow-delay=".5s" style="margin-top:-45px; float: right;">
     <li><a href="index.php" class="active" style="color:#003366; ">Home</a></li>
 
@@ -168,6 +168,7 @@ color: #000;
        </li>
        <li><a class="ex1" href="contactus.php" style="color:#003366;">Contact Us</a></li>
        <li><a class="ex1" href="aboutus.php" style="color:#003366;">About Us</a></li>
+
       <li style="margin-left: 119px;">  <img src="img/india-flag.png" class="center-block pull-right" width="70"></li>
 
   </ul>

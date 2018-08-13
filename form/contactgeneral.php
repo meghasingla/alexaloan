@@ -8,12 +8,12 @@ if($_POST) {
 
 $mailer->from('alexafincorp@gmail.com')
 	->replyTo($_REQUEST['email'])
-	->subject('Enquiry Mail')
+	->subject('ENQUIRY MAIL')
 	->html(parseTemplate('contact-mailgenral.html', $_REQUEST))->send('inquiries@alexafincorp.com');
 
 $mailer->from('alexafincorp@gmail.com')
 	->replyTo('inquiries@alexafincorp.com')
-	->subject('Enquiry Mail')
+	->subject('ENQUIRY MAIL(Do not Reply on this mail)')
 	->html(parseTemplate('contact-General.html', $_REQUEST))->send($_REQUEST['email']);
 
 } 
